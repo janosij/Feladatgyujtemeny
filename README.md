@@ -1,0 +1,1 @@
+Ebben a kis feladatgyűjteményben megpróbálok minél többféle feladatot körbejárni, megoldani, meg ilyenek.
