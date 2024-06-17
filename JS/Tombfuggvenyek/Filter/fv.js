@@ -103,6 +103,6 @@ console.log(number.filter(x=>x%2!==0 && x>0 && x<10));
             Ha IGAZ a visszatérési érték, akkor beszúrja az új tömb végére
   67. sor:  Most lássuk, miért jó ez a +FV a meghívásnál:
             tegyük fel, hogy most a pozitív számokat szeretnék kiválogatni.
-            Ebben az esetben a CSAK a HÍVÁS szintaxisán KELL MÓDOSÍTANI
+            Ebben az esetben CSAK a HÍVÁS szintaxisán KELL MÓDOSÍTANI
             a FV-ben MARAD MINDEN A RÉGI!!! Lásd a példát
 */        
