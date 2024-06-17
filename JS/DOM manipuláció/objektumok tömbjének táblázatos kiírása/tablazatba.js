@@ -20,10 +20,6 @@ const tablazat = document.createElement("table");
     akkor lefut egy névtelen FV */
 btn.addEventListener('click',() => {
 
-/*  A megjegyzésbe tett rész a hagyományos szintxist követi!!!
-    az alatta lévő a beépített forEach-t használja ki.
-    Mindkettőt érdemes megérteni!!!
-*/    
 /*
     for (let i=0; i<lista.length; i++) {
         let sor = document.createElement("tr");
@@ -37,30 +33,18 @@ btn.addEventListener('click',() => {
             tablazat.append(sor);
     }*/
 
-
-
-    /*  A forEach segítségével végiglépkedek a LISTA tömb minden elemén
-        (NEM FELEDVE, hogy minden elem egy OBJEKTUM, maga is összetett adatszerkezet)
-        Az OBJEKTUMOK CIKLUSVÁLTOZÓ felveszi minden tömbbeli objektum értékét    
-    */
     lista.forEach(objektumok =>{
-        /*  létrehozok egy SORRA hivatkozó referenciát*/
+        
         const sor = document.createElement("tr")
 
-        /*  Ezzel a FOR ciklussal lépdelek végig a TÖMB egy-egy OBJEKTUM
-            elemének elemein (az adott sorból kiolvasom a nevet, kort stb)
-            figyeld meg, hogy itt az IN utasítást használjuk!!!
-        */
         for(key in objektumok)
             {
-                /*  létrehozok egy oszlopra hivatkozó referenciát */
                 const oszlop = document.createElement("td");
-                /*  Az oszlopba írom az adott objektum adott kulcsának értékét, pl. a nevet */
                 oszlop.innerHTML = objektumok[key];
-                /*  Az oszlopot a sorhoz adom */
                 sor.appendChild(oszlop);
             }
-            /*  Végigment EGY OBJEKTUM MINDEN ÉRTÉKÉN,
+            /*  Egy tömbelemen lefutott a "for(key in objektumok)" ciklus.
+                Végigment EGY OBJEKTUM MINDEN ÉRTÉKÉN,
                 Kész egy teljes SOR, ezt a táblázathoz adom!    
             */
             tablazat.appendChild(sor)
@@ -73,3 +57,28 @@ tablazat.className = "tablazat";
 
 /* Végül a táblázatot a BODY-hoz adom, ezzel megjelenik a böngészőben */
 b.append(tablazat);
+
+/*
+  23. sor:  A 23-34 sor között megjegyzésbe tett rész a hagyományos 
+            szintaxist követi!!!
+            Az alatta lévő rész a beépített forEach-t használja ki.
+            Teljesen egyformán működnek! Mindkettőt érdemes megérteni!!!
+            A forEach-hez írt magyarázat megy ehhez a részhez is!
+   
+  36. sor:  A forEach segítségével végiglépkedek a LISTA tömb minden elemén.
+            Az "objektumok" nevű CIKLUSVÁLTOZÓ felveszi minden tömbbeli objektum értékét    
+            (NEM FELEDVE, hogy minden elem egy OBJEKTUM, maga is összetett adatszerkezet)
+
+  38. sor:  létrehozok egy SORRA hivatkozó referenciát
+
+  40. sor:  Ezzel a FOR ciklussal lépdelek végig a TÖMB egy-egy 
+            OBJEKTUM típusú elemének elemein 
+            (az adott sorból kiolvasom a nevet, kort stb)
+            figyeld meg, hogy itt a ciklusban az IN utasítást használjuk!!!
+        
+  42. sor:  létrehozok egy oszlopra hivatkozó referenciát
+
+  43. sor:  Az oszlopba írom az adott objektum adott kulcsának értékét, pl. a nevet
+  
+  44. sor:  Az oszlopot a sorhoz adom
+*/
