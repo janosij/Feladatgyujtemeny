@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nagy kezdőbetű</title>
+</head>
+<body>
+    <h1>Nagy kezdőbetű</h1>
+    <h2>Először CSS-el</h2>
+    <style>
+        .div_1 { text-transform:uppercase; } 
+        .div_2 { text-transform:lowercase; }  	     
+        .div_3 { text-transform:capitalize; }  
+        .div_4 { text-transform:none; } 
+        .div_5::first-letter {text-transform: uppercase;}  	     	       	     
+        .div_6::first-letter {text-transform: capitalize;}  	     	       	     
+   </style>     
+   <body>            
+        <div class="div_1">Minden betű nagy lesz </div>
+        <div class="div_2">Minden betű KICSI lesz </div>
+        <div class="div_3">Minden kezdőbetű nagy lesz </div>     
+        <div class="div_4">Nem lesz változás</div>                  
+        <div class="div_5">csak az első betű lesz nagy</div>                  
+        <div class="div_6">csak az első betű lesz nagy</div>                  
+   </body>
+    <script src="nagy.js"></script>
+</body>
+</html>
