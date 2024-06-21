@@ -9,11 +9,20 @@
 let nev = "Dezső" //írjuk ki az ő betűt:
 console.log(nev.charAt(4)); //majd írjuk ki az első betűt:
 console.log(nev.charAt(0)); //majd írjuk ki a szó betűit egymás alá:
+console.log("--------------------------------");
 
 for (let i=0;i<nev.length;i++){
     console.log(nev.charAt(i));
 }
 
+console.log("--------------------------------");
+// itt azt használjuk ki, hogy a sztring karakterek tömbje! 
+// Az "of" pedig úgy működik, mint a foreach a C típusú nyelvekben!
+for (let kar of nev){
+    console.log(kar);
+}
+
+console.log("-------------------------------");
 /*  Írjuk ki egymás alá a betűket visszafelé: 
     (itt a nev.length - 1 azért kell, mert egy sztringben a legnagyobb index 
     1-el kevesebb a sztring hosszánál, hisz 0-val kezdődik az index 
@@ -22,7 +31,7 @@ for (let i=0;i<nev.length;i++){
 for (let i = nev.length - 1; i>=0;i--){
     console.log(nev.charAt(i));
 }
-
+console.log("-------------------------------");
 //  A következő metódus az indexOf(), visszatér egy adott karakter ELSŐ előfordulási INDEXÉVEL!
 
 nev = "Töhötöm";
@@ -108,7 +117,7 @@ let perc = "4";
 let ido = ora.padStart(2,"0") + ":" + perc.padStart(2,"0");
 console.log(ido);
 
-//--------------------------------
+console.log("-------------------------------");
 
 ora = 8;
 perc = 4;
@@ -131,13 +140,14 @@ console.log(valodi_fizetesem + " Ft");
     FONTOS! Ha nem adunk meg vég indexet, akkor a kezdő indextől kiírja a sztring végéig!
     Ne feledjük, hogy az indexelés 0-val kezdődik!!!
 */
-
+console.log("-------------------------------");
 user = "Nagy Dezső";
 
 console.log(user.slice(0));
 console.log(user.slice(0,1));
 console.log(user.slice(0,4));
 console.log(user.slice(5));
+console.log("-------------------------------");
 
 // megkeressük a szóköz indexét a kiíráshoz, vagy tetszőleges karakter indexét (#, @, -, ;, stb)
 nev = "Kiss Rozál"
