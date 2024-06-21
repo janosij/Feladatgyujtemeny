@@ -14,15 +14,15 @@ console.log("--------------------------------");
 for (let i=0;i<nev.length;i++){
     console.log(nev.charAt(i));
 }
-
 console.log("--------------------------------");
+
 // itt azt használjuk ki, hogy a sztring karakterek tömbje! 
 // Az "of" pedig úgy működik, mint a foreach a C típusú nyelvekben!
 for (let kar of nev){
     console.log(kar);
 }
-
 console.log("-------------------------------");
+
 /*  Írjuk ki egymás alá a betűket visszafelé: 
     (itt a nev.length - 1 azért kell, mert egy sztringben a legnagyobb index 
     1-el kevesebb a sztring hosszánál, hisz 0-val kezdődik az index 
@@ -32,10 +32,21 @@ for (let i = nev.length - 1; i>=0;i--){
     console.log(nev.charAt(i));
 }
 console.log("-------------------------------");
+
 //  A következő metódus az indexOf(), visszatér egy adott karakter ELSŐ előfordulási INDEXÉVEL!
 
 nev = "Töhötöm";
 console.log(nev.indexOf("ö")); // 1-el tér vissza, hisz 0-a a T és 1-az ö betű
+
+// FONTOS!!! Ha nem találja a keresett karaktert, akkor -1-el tér vissza az indexOf()
+// Az első kiírásnál az AltGr + 7-t, a másodiknál a "" és a ''-t használtam 
+
+if (nev.indexOf("x") != -1){
+    console.log(`Az "x" karakter első előfordulásának a pozíciója: ${nev.indexOf("x") + 1}`);
+}
+else{
+    console.log("A sztringben nincs 'x' karakter");
+}
 
 //  A lastIndexOf() metódus, visszatér egy adott karakter UTOLSÓ előfordulási INDEXÉVEL! 
 console.log(nev.lastIndexOf("ö")); // 5-el tér vissza, hisz az utolsó ö betű a 6., aminek 5 az indexe, mert az index 0-val kezdődik nem 1-el!!!
