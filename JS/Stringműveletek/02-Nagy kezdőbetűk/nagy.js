@@ -1,4 +1,5 @@
 // Alakítsuk át a sztring első karakterét nagybetűssé
+// Az előző feladatból tudjuk, hogy a "slice" 1 paraméterrel a végéig kiírja a sztringet
 
 let nev= "dezső";
 nev = nev.charAt(0).toUpperCase() + nev.slice(1);
