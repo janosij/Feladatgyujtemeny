@@ -4,7 +4,7 @@ let index = 0;
 
 function Ir() {
     if (index < szoveg.length) {
-        aktualisSzoveg += szoveg.charAt(index);
+        aktualisSzoveg += szoveg.charAt(index); //Ezt jelenti: aktualisSzoveg = aktualisSzoveg + szoveg.charAt(index);
         document.getElementById('papir').innerHTML = aktualisSzoveg;
         index++;
         setTimeout(Ir, 100); 
@@ -36,5 +36,5 @@ function Ir() {
             1000 ms = 1 s.
             Mivel itt azt a fv-t hívjuk meg, amelyik tartalmazza magát a hívó kifejezést (setTimeout-ot)
             Ezért az egész olyan, mintha egy CIKLUS lenne! Addig fut, amíg belelép
-            az elágazásba! Addig lép bele, amíg nem éri el a végét!
+            az elágazásba! Addig lép bele, amíg nem éri el a szöveg végét!
 */
