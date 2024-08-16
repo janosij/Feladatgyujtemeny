@@ -56,6 +56,7 @@ szamok.forEach(kiir);
 function kob(elem,index,tomb){
     tomb[index] = Math.pow(elem,3);
 }
+/* HÍVÁSKOR NEM KELL PARAMÉTERT MEGADNI A kob FV-nek!!! */
 szamok.forEach(kob);
 szamok.forEach(kiir);
 
